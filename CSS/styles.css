@@ -726,10 +726,6 @@ footer, footer a, footer section, footer nav, footer nav ul, footer nav ul a {
 
     .form-grid {
 
-        display: grid;
-
-        grid-template-columns: auto auto;
-
         grid-gap: 20px;
 
     }
