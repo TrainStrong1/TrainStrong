@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TrainStrong - Gallery</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logo.jpg" alt="Train Strong Logo" class="logo-image">
+            <nav>
+                <a href="index.html">Home</a>&nbsp;&nbsp;
+                <a href="about.html">About Us</a>&nbsp;&nbsp;
+                <a href="training.html">Training</a>&nbsp;&nbsp;
+                <a href="resources.html">Resources</a>&nbsp;&nbsp;
+                <a href="Testimonials.html">Testimonials</a>&nbsp;&nbsp;
+                <a href="gallery.html">Gallery</a>&nbsp;&nbsp;
+                <a href="contact.html">Contact Us</a>&nbsp;&nbsp;
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="content">
+            <h1>Gallery</h1>
+            <p>Welcome to our Gallery! Dive into a collection of photos and videos showcasing our dynamic and engaging training sessions. Witness the dedication and enthusiasm of our participants as they learn and practice essential skills. Explore the moments that make our training sessions unique and impactful.</p><Br>
+           <div class="photos"> 
+  <h2>Photos</h2>
+
+  <!-- First row of photos -->
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="images/equip.jpg" alt="Equipment" class="gallery-image">
+      <p>Discover the essential tools used in CPR, including Automated External Defibrillators (AEDs), pocket masks, and training manikins. These devices are crucial for effective resuscitation and practice.</p>
+    </div>
+    <div class="gallery-item">
+      <img src="images/CPR Class.jpg" alt="CPR Class" class="gallery-image">
+      <p>Join our comprehensive CPR class to master life saving skills. This hands-on training covers CPR for adults, children, and infants, equipping you with the knowledge and confidence to act in critical situations.</p>
+    </div>
+  </div>
+
+  <!-- Second row of photos -->
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="images/infant.jpg" alt="Infant Training" class="gallery-image">
+      <p>Learn the specialized techniques for performing CPR on infants. This session covers gentle chest compressions and rescue breaths tailored to the needs of babies, ensuring their safety in emergencies.</p>
+    </div>
+    <div class="gallery-item">
+      <img src="images/infant2.jpg" alt="Infant Training 2" class="gallery-image">
+      <p>Practice life-saving skills on infant manikins to be prepared for emergencies involving babies.</p>
+    </div>
+  </div>
+</div>
+                </div>
+            </div><br><br>
+            <div class="videos">
+                <h2>Videos</h2>
+                <!-- Add videos here -->
+            </div>
+        </section>
+    </main>
+  <footer>
+         Train Strong<br />
+         1200 W. Roosvelt<br/>
+		 Chicago, IL 60607<br />
+         Office: (312) 123 - 1234<br />      
+        <p>&copy; 2025 TrainStrong. All rights reserved.</p>
+    </footer>
+	<div id="lightbox" style="display:none;" onclick="this.style.display='none'">
+  <img id="lightbox-img" src="" alt="Expanded View">
+</div>
+	<script>
+  document.getElementById("searchInput").addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    const items = document.querySelectorAll(".content p, .gallery-item p");
+
+    items.forEach(item => {
+      item.parentElement.style.display = item.textContent.toLowerCase().includes(query) ? "block" : "none";
+    });
+  });
+</script>
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  document.querySelectorAll(".gallery-image").forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    });
+  });
+</script>
+
+</body>
+</html>
